@@ -1,0 +1,24 @@
+@(username: String, id: String)(implicit flash : Flash)
+
+@main("newComment") {
+<div>
+    <form method="get" action="createComment">
+        <div class="container">
+            <h1>add a thought</h1>
+            <label for="text"><b>Text</b></label>
+            <input type="text" placeholder="Enter text" name="text" required>
+
+            <label for="hashtag"><b>hashtag</b></label>
+            <input type="text" placeholder="Enter hashtag" name="hashtag" required>
+            <input type="text" placeholder="Don't touch this" value="@username" name="username" style="display: none;">
+            <input type="text" placeholder="Don't touch this" value="@id" name="id" style="display: none;">
+            <button type="submit">Post</button>
+
+<!--            Added for the second session-->
+            <label for="img">Choose a picture for upload:</label>
+            <input type="file" id="avatar" name="img" accept="image/png, image/jpeg">
+
+        </div>
+    </form>
+</div>
+}
